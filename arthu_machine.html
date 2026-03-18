@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Arthur's Machine</title>
+</head>
+<body>
+    <div class="container">
+        <img src="img/saber.jpg" alt="" class="img_saber">
+        <div class="header">
+            <h2 class="top_hand">Arthur's Machine</h2>
+            <img src="img/misaka.png" id="img_misaka">
+        </div>
+        <div class="calcBody">
+            <div class="separacao">
+            <h3>Digite um número decimal: </h3>
+            <input type="text" class="style-input" id="ipt_numero_decimal" placeholder="Ex: 42">
+
+            <button onclick="converterDecimal()">Converter Decimal</button>
+
+            <h3>Resultado</h3>
+
+            <h4>Octal: <span id="decimalOctal"></span> </h4>
+            
+            <h4>Hexadecimal: <span id="decimalHexadecimal"></span></h4>
+
+            <h4>Binário: <span id="decimalBinario"></span> </h4>
+
+        </div>
+
+        <div class="separacao">
+            <h3>Digite um número binário: </h3>
+            <input type="text" class="style-input" id="ipt_numero_binario" placeholder="Ex: 1101">
+
+            <button onclick="converterBinario()">Converter Binário</button>
+
+            <h3>Resultado</h3>
+
+            <h4>Octal: <span id="binarioOctal"></span></h4>
+
+            <h4>Hexadecimal: <span id="binarioHexadecimal"></span></h4>
+
+            <h4>Decimal: <span id="binarioDecimal"></span> </h4>
+
+
+        </div>
+        <br>
+        <div class="separacao">
+            <h3>Digite um número octal: </h3>
+            <input type="text" class="style-input" id="ipt_numero_octal" placeholder="Ex: 423">
+
+            <button onclick="converterOctal()">Converter Octal</button>
+
+            <h3>Resultado</h3>
+
+            <h4>Decimal: <span id="octalDecimal"></span> </h4>
+
+            <h4>Hexadecimal: <span id="octalHexadecimal"></span></h4>
+
+            <h4>Binário: <span id="octalBinario"></span> </h4>
+        </div>
+
+        <div class="separacao divHexa">
+            <h3>Digite um número hexadecimal: </h3>
+            <input type="text" class="style-input" id="ipt_numero_hexadecimal" placeholder="Ex: FF">
+
+            <button onclick="converterHexadecimal()">Converter Hexadecimal</button>
+
+            <h3>Resultado</h3>
+
+            <h3>Octal: <span id="hexadecimalOctal"></span></h3>
+
+            <h3>Decimal: <span id="hexadecimalDecimal"></span></h3>
+
+            <h3>Binário: <span id="hexadecimalBinario"></span></h3>
+        </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function converterDecimal() {
+        let numeroDeciml = Number(ipt_numero_decimal.value);
+
+            decimalOctal.innerHTML = numeroDeciml.toString(8);
+            decimalHexadecimal.innerHTML = numeroDeciml.toString(16).toUpperCase();
+            decimalBinario.innerHTML = numeroDeciml.toString(2);
+    }
+    function converterBinario() {
+            let numeroBinario = parseInt(Number(ipt_numero_binario.value), 2)
+
+            binarioOctal.innerHTML = numeroBinario.toString(8);
+            binarioHexadecimal.innerHTML = numeroBinario.toString(16).toUpperCase();
+            binarioDecimal.innerHTML = numeroBinario.toString(10);
+    };
+    function converterOctal() {
+            let numeroOctal = parseInt(Number(ipt_numero_octal.value), 8);
+
+            octalDecimal.innerHTML = numeroOctal.toString(10);
+            octalHexadecimal.innerHTML = numeroOctal.toString(16).toUpperCase();
+            octalBinario.innerHTML = numeroOctal.toString(2);
+    };
+    function converterHexadecimal() {
+        let numeroHexadecimal = parseInt(ipt_numero_hexadecimal.value, 16);
+        
+        hexadecimalOctal.innerHTML = numeroHexadecimal.toString(8);
+        hexadecimalDecimal.innerHTML = numeroHexadecimal.toString(10);
+        hexadecimalBinario.innerHTML = numeroHexadecimal.toString(2);
+    };
+</script>
+</html>
