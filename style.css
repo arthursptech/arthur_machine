@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+}
+#img_misaka {
+    position: relative;
+    width: 300px;
+    text-align: center;    
+}
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+    bottom: 860px;
+    font-size: 20px;
+}
+.img_saber {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.top_hand {
+    position: absolute;
+    left: 380px;
+    transform-origin: bottom right 10px;
+    transform: rotate3d(3,12,4,50deg);
+}
+.calcBody {
+    position: relative;
+    bottom: 850px;
+    left: 40px;
+    color: white;
+    margin-right:10px;
+}
+.separacao {
+    display:inline-block;
+}
+.divHexa {
+    bottom: 10px;
+    position: absolute;
+    margin-left: 17px;
+}
+.style-input {
+    background-image: url(img/saber.jpg);
+    color: white;
+}
